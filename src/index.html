@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="./output.css" rel="stylesheet">
+    <link href="./input.css" rel="stylesheet">
+    <title>Microsoft Store</title>
+</head>
+
+<body class="bg-white">
+    <div class="navbar flex justify-between m-4 text-[12px]">
+        <div class="hamburger text-gray-500 md:hidden">
+            <span class="material-symbols-outlined" id="hamburger" onclick="toggleSidebarBtn(); sidebar()">menu</span>
+            <span class="material-symbols-outlined hidden" id="close" onclick="toggleSidebarBtn()">
+                close
+            </span>
+        </div>
+        <div class="search text-gray-500 md:order-4 flex"> <!--3rd-->
+            <div class="hidden md:block">
+                <p class="text-sm mr-1">Search</p>
+            </div>
+            <div>
+                <span class="material-symbols-outlined w-[16px] h-[18px]">
+                    search
+                </span>
+            </div>
+        </div>
+        <div class="logo  md:order-1 md:ml-12"> <!-- 1st -->
+            <img class="w-[108px] h-[23px] "
+                src="https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RE1Mu3b?ver=5c31"
+                alt="" srcset="">
+        </div>
+        <div class="hidden md:flex md:order-2">
+            <div class="mx-3 hover:underline"><a href="#">Microsoft 365</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Teams</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Copilot</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Windows</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Surface</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Xbox</a></div>
+            <div class="mx-3 hover:underline"><a href="#">Support</a></div>
+        </div>
+        <div class="flex md:order-3 hover:underline cursor-pointer items-center">
+            <div>
+                <option value="" selected>All Microsoft</option>
+            </div>
+            <div> <select name="All Microsoft" id="">All Microsoft</select> </div>
+        </div>
+        <div class="cart md:order-5"> <!-- 4th-->
+            <span class="material-symbols-outlined text-gray-500  ">
+                shopping_cart
+            </span>
+        </div>
+        <div class="myAccount flex md:order-5"> <!--5TH-->
+            <div class="mx-2 hidden md:flex">
+                <span class=" text-sm">Sign In</span>
+            </div>
+            <div class="mx-2">
+                <span class="material-symbols-outlined text-gray-500">person_add</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="bg-gray-100 w-full hidden" id="sidebar">
+        <div class="py-3 ml-3"><a href="#">Microsoft 365</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Teams</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Co-pilot</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Windows</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Surface</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Xbox</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Support</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Software</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">PC & devices</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Entertainment</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Business</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Developer & IT</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">Other</a> </div>
+        <hr>
+        <div class="py-3 ml-3"> <a href="#">View Sitemap</a> </div>
+        <hr>
+    </div>
+    <!-- Navbar ends here -->
+    <!-- slideshow images start here -->
+    <div class="headerImage relative px-[7px] slide" id="headerImage">
+        <div class="hidden md:flex relative">
+            <div>
+                <a href="#"><img class=""
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-MultiCanvas-Microsoft-Copilot-App-3screens:VP5-1920x600"
+                        alt=""></a>
+            </div>
+            <div class="absolute lg:mx-[8%] lg:mt-[7%] lg:w-[30%] md:mx-2 md:w-[40%]">
+                <h1 class="text-3xl font-semibold text-wrap  ">Unlock your potential with Microsoft Copilot</h1>
+                <p>Get things done faster and unleash your creativity with the power of AI anywhere you go.</p>
+                <button class="bg-blue-500 h-[40px] w-[230px] text-white rounded font-semibold mt-5">Download the
+                    Copilot
+                    Now</button>
+            </div>
+        </div>
+        <div class="md:hidden">
+            <div>
+                <a href=""><img class="w-100"
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-MultiCanvas-Microsoft-Copilot-App-3screens:VP2-859x540"
+                        alt=""></a>
+                <div class="ml-6">
+                    <h1 class="text-2xl font-semibold  mt-10 pb-3">Unlock your potential with microsoft Copilot</h1>
+                    <p>Get things done faster and unleash your creativity with the power of AI anywhere you go.</p>
+                </div>
+                <div class="ml-6 my-3">
+                    <button class="bg-blue-500 h-[40px] w-[230px] text-white rounded font-semibold">Download the
+                        Copilot
+                        Now</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <!-- second image starts here that will go in slideshow -->
+    <div class="headerImage relative px-[7px] slide" id="headerImage">
+        <div class="hidden md:flex relative">
+            <div>
+                <a href="#"><img class=""
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP5-1920x600"
+                        alt=""></a>
+            </div>
+            <div class="absolute ml-[59%] mt-[10%]">
+                <h1 class="text-4xl font-semibold text-wrap  ">Surface Pro 9</h1>
+                <p>Tablet versatility and laptop power — all in one ultra-portable device</p>
+                <button class="bg-blue-500 h-[40px] w-[150px] text-white rounded font-semibold mt-5">Learn more</button>
+            </div>
+        </div>
+        <div class="md:hidden">
+            <div>
+                <a href=""><img class="w-100"
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Highlight-Surface-Pro-9-M1-Family-02-1:VP2-859x540"
+                        alt=""></a>
+                <div class="ml-6">
+                    <h1 class="text-3xl font-semibold  mt-10 pb-3">Surface Pro 9</h1>
+                    <p>Tablet versatility and laptop power — all in one ultra-portable device</p>
+                </div>
+                <div class="ml-6 my-6">
+                    <button class="bg-blue-500 h-[40px] w-[230px] text-white rounded font-semibold">Learn more</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </div>
+    <!-- header ends here ab aage ka suru hoga -->
+    <!-- arrows keys for traversal -->
+    <div class="flex justify-center my-2 md:my-5">
+        <div>
+            <span class="material-symbols-outlined mx-5 cursor-pointer">
+                arrow_back_ios
+            </span>
+        </div>
+        <div>
+            <span class="material-symbols-outlined mx-5 cursor-pointer">
+                arrow_forward_ios
+            </span>
+        </div>
+    </div>
+    <div class="flex justify-center flex-wrap">
+        <div class="mx-5 flex flex-col items-center my-3">
+            <div class=""><a href=""><img class="h-10 w-10" src="/images/Link-List-Icons-Microsoft-365.png" alt=""></a>
+            </div>
+            <div> <a class="text-blue-600 underline" href="">Choose your Microsoft 365</a> </div>
+        </div>
+        <div class="mx-5 flex flex-col items-center my-3">
+            <div> <a href=""><img class="h-10 w-10" src="/images/Link-List-Icons-Xbox-Games-Consoles.png" alt=""></a>
+            </div>
+            <div> <a class="text-blue-600 underline" href="">Shop Xbox</a> </div>
+        </div>
+        <div class="mx-5 flex flex-col items-center my-3">
+            <div> <a href=""><img class="w-10 h-10" src="/images/Link-List-Icons-Microsoft-365.png" alt=""></a> </div>
+            <div> <a class="text-blue-600 underline" href="">Get windows 11</a> </div>
+        </div>
+        <div class="mx-5 flex flex-col items-center my-3">
+            <div> <a href=""><img class="w-10 h-10" src="/images/Link-List-Icons-Surface-Devices.png" alt=""></a> </div>
+            <div> <a class="text-blue-600 underline" href="">Explore Surface Devices</a> </div>
+        </div>
+    </div>
+    <!-- icon part khatam -->
+    <div class="flex flex-wrap  justify-around mx-10 my-16">
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Surface-Laptop-5-M1-Platinum-01-1?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">Surface Laptop 5</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Surface-Laptop-Studio-01-CP?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">Surface Laptop Studio</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSX-CP-Xbox-Series-X?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">X Box series X</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div class="">
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Microsoft-365-Lifestyle-Sandstone-Icon-Toss?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">Maximise the everyday with Microsoft 365</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- flexbox khatam hua -->
+    <div class=" md:flex relative mx-14 mt-10 hidden">
+        <div>
+            <a href="#"><img class=""
+                    src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-Hero-Xbox-Series-S:VP5-1596x600"
+                    alt=""></a>
+        </div>
+        <div class="absolute md:mx-[8%] md:mt-[17%] md:w-[30%] mt-[7%] mx-[4%]">
+            <h1 class="text-3xl font-semibold text-wrap  ">Xbox Series S</h1>
+            <p>Next-gen performance in the smallest Xbox ever</p>
+            <button class="bg-blue-500 h-[40px] w-[230px] text-white rounded font-semibold mt-5">Download the
+                Copilot
+                Now</button>
+        </div>
+    </div>
+    <div class="md:hidden">
+        <div>
+            <a href=""><img class="w-100"
+                    src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-XSS-Hero-Xbox-Series-S:VP2-859x540"
+                    alt=""></a>
+            <div class="ml-6">
+                <h1 class="text-2xl font-semibold  mt-10 pb-3">Xbox Series S</h1>
+                <p>Next-gen performance in the smallest Xbox ever</p>
+            </div>
+            <div class="ml-6 my-3">
+                <button class="bg-blue-500 h-[40px] w-[230px] text-white rounded font-semibold">Shop X box Series X
+                </button>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <!-- business wala section -->
+    <div class="text-4xl font-semibold mx-14 pt-20 ">
+        <h1>For business</h1>
+    </div>
+    <div class="flex flex-wrap  justify-around mx-10">
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-Surf-CP-SurfaceFamilyForBusiness?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-20">Surface for Business</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/gldn-CP-Microsoft-Teams-Commercial?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">Get Microsoft Teams for free</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div>
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Windows-11-Business?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-10">Windows 11 for business</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm">Learn
+                    More</button>
+            </div>
+        </div>
+        <div class="flex flex-col items-center shadow-2xl  my-4 w-80">
+            <div class="">
+                <a href=""><img
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Content-Card-Azure-AI-Bloom?wid=380&hei=213&fit=crop"
+                        alt=""></a>
+            </div>
+            <div>
+                <h1 class="text-3xl font-semibold pb-20">Join the era of AI</h1>
+            </div>
+            <div class="max-w-72">
+                <p>Sophisticated style and multitasking speed powered by 12th Gen Intel® Core, with Windows 11.</p>
+            </div>
+            <div class="mt-[19%] mr-auto mb-6"> <button class="bg-blue-500 text-white p-1 rounded-sm ">Learn
+                    More</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- follow krlo wla bhikh -->
+    <div class="flex my-28 mx-14 items-center">
+        <div class="">
+            <p>Follow Microsoft</p>
+        </div>
+        <div class="flex ">
+            <div class="px-3"><a href=""><img class="h-10 w-10"
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/Facebook%202x?scl=1"
+                        alt=""></a></div>
+            <div class="px-3"><a href="#"><img class="h-10 w-10"
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/icon-MSCOM-X-64x64?scl=1"
+                        alt=""></a></div>
+            <div class="px-3"><a href="#"><img class="h-10 w-10"
+                        src="https://cdn-dynmedia-1.microsoft.com/is/image/microsoftcorp/YouTube%202x?scl=1" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <!-- footer starts here -->
+    <div class="bg-gray-100 flex flex-wrap text-gray-600 justify-evenly pl-12">
+        <div class="w-60 ">
+            <div>
+                <p class=" font-semibold">Whats New</p>
+            </div>
+            <div class="text-xs">
+
+                <div class="hover:underline py-2 "><a href="#">Games</a></div>
+                <div class="hover:underline py-2"><a href="#">Surface Pro 9</a></div>
+                <div class="hover:underline py-2"><a href="#">Surface Laptop 5</a></div>
+                <div class="hover:underline py-2"><a href="#">Surface Laptop go 2</a></div>
+                <div class="hover:underline py-2"><a href="#">Microsoft Copilot</a></div>
+                <div class="hover:underline py-2"><a href="#">Microsoft 365</a></div>
+                <div class="hover:underline py-2"><a hre hover:underlinef="#">Windows 11 apps</a></div>
+            </div>
+        </div>
+        <div>
+            <div class="w-60">
+                <p class=" font-semibold">Microsoft Store</p>
+            </div>
+            <div class="text-xs">
+
+
+                <div class="hover:underline py-2"><a href="#">Account Profile</a></div>
+                <div class="hover:underline py-2"><a href="#">Download centre</a></div>
+                <div class="hover:underline py-2"><a href="#">Microsoft Store Support</a></div>
+                <div class="hover:underline py-2"><a href="#">Returns</a></div>
+                <div class="hover:underline py-2"><a href="#">Order Tracing</a></div>
+            </div>
+        </div>
+        <div class="w-60">
+            <div>
+                <p class=" font-semibold">Education</p>
+            </div>
+            <div class="text-xs">
+
+                <div class="py-2 hover:underline"><a href="#">Microsft in education</a></div>
+                <div class="py-2 hover:underline"><a href="#">Devices for education</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft Teams For Education</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsft 365 for education</a></div>
+                <div class="py-2 hover:underline"><a href="#">Office Education</a></div>
+                <div class="py-2 hover:underline"><a href="#">Educator Training and development</a></div>
+                <div class="py-2 hover:underline"><a href="#">Deals for students and parents</a></div>
+                <div class="py-2 hover:underline"><a href="#">Azure for education</a></div>
+            </div>
+        </div>
+        <div class="w-60">
+            <div>
+                <p class=" font-semibold">Business</p>
+            </div>
+            <div class="text-xs">
+
+                <div class="py-2 hover:underline"><a href="#">Microsft cloud</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsft Security</a></div>
+                <div class="py-2 hover:underline"><a href="#">Azure</a></div>
+                <div class="py-2 hover:underline"><a href="#">Dynamics 365</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft 365</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft Advertising</a></div>
+                <div class="py-2 hover:underline"><a href="#">Copioly for Microsft 365</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft teams</a></div>
+            </div>
+        </div>
+        <div class="w-60">
+            <div>
+                <p class="font-semibold">Developer & IT </p>
+            </div>
+            <div class="text-xs">
+
+                <div class="py-2 hover:underline"><a href="#">Developer centre</a></div>
+                <div class="py-2 hover:underline"><a href="#">Documentation</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft Learn</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft Team Community</a></div>
+                <div class="py-2 hover:underline"><a href="#">Azure Microsft</a></div>
+                <div class="py-2 hover:underline"><a href="#">AppSource</a></div>
+                <div class="py-2 hover:underline"><a href="#">Microsoft Poer Platform</a></div>
+                <div class="py-2 hover:underline"><a href="#">Visual Studio</a></div>
+            </div>
+        </div>
+        <div class="w-60">
+            <div>
+                <p class=" font-semibold">Company</p>
+            </div>
+            <div class="text-xs py-2">
+
+                <div class="py-2 hover:underline"><a href="#">Careers</a></div>
+                <div class="py-2 hover:underline"><a href="#">About Microsoft</a></div>
+                <div class="py-2 hover:underline"><a href="#">Company News</a></div>
+                <div class="py-2 hover:underline"><a href="#">Pricact at Microsoft</a></div>
+                <div class="py-2 hover:underline"><a href="#">Investors</a></div>
+                <div class="py-2 hover:underline"><a href="#">Security</a></div>
+                <div class="py-2 hover:underline"><a href="#">Sustainablity</a></div>
+            </div>
+        </div>
+
+    </div>
+    <div class="bg-gray-100 text-gray-600 flex">
+        <div class="flex hover:underline items-center px-8">
+
+            <div>
+                <span class="material-symbols-outlined">
+                    public
+                </span>
+            </div>
+            <div class="text-xs">
+                <a href="#">English(India)</a>
+            </div>
+        </div>
+        <div class="hover:underline text-xs flex items-center">
+           <div> <a href="#">Your Privacy Choice</a> </div>
+        </div>
+        <div class="hover:underline text-xs flex items-center px-8">
+            <div> <a href="#">Consumer Health Privacy </a> </div>
+         </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
